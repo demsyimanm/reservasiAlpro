@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin/logib');
+Route::get('admin/login', function () {
+    return view('admin/login');
 });
