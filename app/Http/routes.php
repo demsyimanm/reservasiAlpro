@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('admin', function () {
-    return view('admin/login');
-});
+Route::get('admin','HomeController@login');
+Route::post('admin',array('before' => 'csrf', 'uses' => 'HomeController@login'));
+Route::get('logout','HomeController@logout');
 
-Route::get('/', function(){
+
+Route::group(['middleware' => 'auth'], function()
+{
+	Route::get('/','HomeController@index');
+});
+/*Route::get('/', function(){
 	return view('admin/home');
 });
+*/

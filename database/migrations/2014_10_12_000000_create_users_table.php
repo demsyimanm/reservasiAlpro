@@ -45,7 +45,7 @@ class CreateUsersTable extends Migration
             $table->integer('jumlah');
             $table->integer('admin_id');
             $table->string('penutor');
-            $table->bool('status');
+            $table->boolean('status');
             $table->string('keterangan');
             $table->rememberToken();
             $table->timestamps();

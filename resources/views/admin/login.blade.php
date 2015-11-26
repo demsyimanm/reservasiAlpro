@@ -40,7 +40,7 @@
                   prompt : 'Please enter your username'
                 },
                 {
-                  type   : 'username',
+                  type   : 'length[5]',
                   prompt : 'Please enter a valid username'
                 }
               ]
@@ -53,7 +53,7 @@
                   prompt : 'Please enter your password'
                 },
                 {
-                  type   : 'length[6]',
+                  type   : 'length[5]',
                   prompt : 'Your password must be at least 6 characters'
                 }
               ]
@@ -75,12 +75,12 @@
         Log-in to your account
       </div>
     </h2>
-    <form class="ui large form">
+    <form class="ui large form" action="" method="POST">
       <div class="ui stacked segment">
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="email" placeholder="Username">
+            <input type="text" name="username" placeholder="Username">
           </div>
         </div>
         <div class="field">
@@ -89,6 +89,7 @@
             <input type="password" name="password" placeholder="Password">
           </div>
         </div>
+        {{csrf_field()}}
         <div class="ui fluid large teal submit button" style="background-color:#0A3E56">Login</div>
       </div>
 
