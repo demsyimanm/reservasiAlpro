@@ -9,27 +9,8 @@
 
   <!-- Site Properities -->
   <title>Login</title>
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/reset.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/site.css')}}">
-
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/container.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/grid.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/header.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/image.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/menu.css')}}">
-
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/divider.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/segment.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/form.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/input.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/button.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/list.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/message.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{URL::to('assets/Semantic/components/icon.css')}}">
-
-  <script src="{{URL::to('assets/js/jquery.min.js')}}"></script>
-  <script src="{{URL::to('assets/Semantic/components/form.js')}}"></script>
-  <script src="{{URL::to('assets/Semantic/components/transition.js')}}"></script>
+  @include('admin.master.header')
+  @include('admin.master.footer')
 
   <style type="text/css">
     body {
@@ -116,11 +97,11 @@
     </form>
 
     <div class="ui message">
-      New to us? <a href="#">Sign Up</a>
+      <p><b>Algorithm and Programming Laboratory</b></p>
+      <p>Teknik Informatika - ITS Surabaya</p>
     </div>
   </div>
 </div>
 
 </body>
-
 </html>
