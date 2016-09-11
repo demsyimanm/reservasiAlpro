@@ -42,6 +42,7 @@ class CreateUsersTable extends Migration
             $table->string('NRP_pemesan');
             $table->string('no_hp_pemesan');
             $table->integer('matkul_id');
+            $table->string('materi');
             $table->integer('jumlah');
             $table->integer('admin_id');
             $table->string('penutor');

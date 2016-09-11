@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Matakuliah extends Model
 {
-    use SoftDeletes;
 
 	protected $table = 'matakuliah';
 	protected $primaryKey = 'id';
@@ -16,8 +15,6 @@ class Matakuliah extends Model
     protected $fillable = array( 
     	'name', 
 	);
-    protected $SoftDelete = true;
-	protected $dates = ['deleted_at'];
 
 	public function reservation()
 	{

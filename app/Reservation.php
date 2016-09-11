@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model
 {
-    use SoftDeletes;
 
 	protected $table = 'reservation';
 	protected $primaryKey = 'id';
@@ -21,6 +20,7 @@ class Reservation extends Model
 		'NRP_pemesan',
         'no_hp_pemesan',
         'matkul_id',
+        'materi',
         'jumlah',
         'admin_id',
         'penutor',
@@ -35,7 +35,7 @@ class Reservation extends Model
 		return $this->belongsTo('App\Admin');
 	}
 
-	public function matakuliah()
+	public function matkul()
 	{
 		return $this->belongsTo('App\Matakuliah');
 	}

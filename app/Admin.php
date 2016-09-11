@@ -3,27 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Admin extends Model
 {
-   	use SoftDeletes;
 
-	protected $table = 'users';
+	protected $table = 'admin';
 	protected $primaryKey = 'id';
 	public $timestamps = true;
 	public $incrementing = true;
 
     protected $fillable = array( 
-    	'name', 
+    	'name',
+    	'nrp', 
 		'no_hp', 
-    	'alamat', 
+    	'alamat',
+    	'tanggal_lahir', 
 		'email', 
 		'facebook', 
 		'line'
 	);
-    protected $SoftDelete = true;
-	protected $dates = ['deleted_at'];
 
 	public function reservation()
 	{
